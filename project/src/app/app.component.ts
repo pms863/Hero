@@ -4,10 +4,10 @@ import { HeroesComponent } from './heroes/heroes.component'; // Importa el compo
 
 @Component({
   selector: 'app-root',
-  standalone: true,
+  standalone: true,  // Este componente también es standalone
   imports: [RouterOutlet, HeroesComponent], // Agrega HeroesComponent aquí
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'] // Cambiado de styleUrl a styleUrls
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'Tour of Heroes';
