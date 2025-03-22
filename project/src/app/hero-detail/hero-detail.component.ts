@@ -1,16 +1,15 @@
-import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { NgIf, NgFor, UpperCasePipe } from '@angular/common';
+import { Component, Input, OnInit } from '@angular/core';
 import { Hero } from '../hero';
-
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common'; 
 @Component({
-  selector: 'app-hero-detail', 
+  selector: 'app-hero-detail',
   standalone: true,
-  imports: [CommonModule, FormsModule, NgIf, NgFor, UpperCasePipe,], 
+  imports: [FormsModule, CommonModule], 
   templateUrl: './hero-detail.component.html',
   styleUrls: ['./hero-detail.component.css']
 })
 export class HeroDetailComponent {
-  @Input() hero?: Hero; 
+  @Input() hero?: Hero;
 }
+

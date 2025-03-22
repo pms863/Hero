@@ -4,7 +4,6 @@ import { HeroesComponent } from './heroes/heroes.component'; // Importa el compo
 
 @Component({
   selector: 'app-root',
-  standalone: true,  // Este componente también es standalone
   imports: [RouterOutlet, HeroesComponent], // Agrega HeroesComponent aquí
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
