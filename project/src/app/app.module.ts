@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { AppComponent } from './app.component'; // Import the standalone component
+import { AppComponent } from './app.component';
+import { MessagesComponent } from './messages/messages.component'; 
 
 @NgModule({
   declarations: [
@@ -13,8 +14,9 @@ import { AppComponent } from './app.component'; // Import the standalone compone
     FormsModule,
     AppComponent ,
     HeroesComponent,
-    HeroDetailComponent],
+    HeroDetailComponent,
+    MessagesComponent],
   providers: [],
   bootstrap: []
 })
-export class AppModule { }
+export class AppModule { }  
