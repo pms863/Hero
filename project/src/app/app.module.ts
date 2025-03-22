@@ -4,7 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { AppComponent } from './app.component';
-import { MessagesComponent } from './messages/messages.component'; 
+import { MessagesComponent } from './messages/messages.component';
+import { AppRoutingModule } from './app-routing.module'; 
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MessagesComponent } from './messages/messages.component';
     AppComponent ,
     HeroesComponent,
     HeroDetailComponent,
-    MessagesComponent],
+    MessagesComponent,
+    AppRoutingModule],
   providers: [],
   bootstrap: []
 })
