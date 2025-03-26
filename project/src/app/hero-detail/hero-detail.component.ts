@@ -15,6 +15,7 @@ import { HeroService } from '../hero.service';
 })
 export class HeroDetailComponent implements OnInit {
   hero: Hero | undefined;
+  newPower: string = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -34,5 +35,18 @@ export class HeroDetailComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  addPower(): void { // Añadir esta función
+    if (this.hero && this.newPower) {
+      this.hero.powers.push(this.newPower);
+      this.newPower = '';
+    }
+  }
+
+  removePower(index: number): void { // Añadir esta función
+    if (this.hero) {
+      this.hero.powers.splice(index, 1);
+    }
   }
 }

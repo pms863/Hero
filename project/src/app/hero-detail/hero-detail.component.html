@@ -5,5 +5,15 @@
     <label for="hero-name">Hero name: </label>
     <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/>
   </div>
+  <div>
+    <label for="hero-powers">Super Powers: </label>
+    <ul>
+      <li *ngFor="let power of hero.powers; let i = index">
+        {{power}} <button (click)="removePower(i)">Remove</button>
+      </li>
+    </ul>
+    <input [(ngModel)]="newPower" placeholder="New power"/>
+    <button (click)="addPower()">Add Power</button>
+  </div>
   <button type="button" (click)="goBack()">go back</button>
 </div>
