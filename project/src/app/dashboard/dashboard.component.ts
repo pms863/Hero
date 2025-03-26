@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [RouterModule],
+  imports: [RouterModule,CommonModule],
   templateUrl: './dashboard.component.html',
   styleUrls: [ './dashboard.component.css' ]
 })
