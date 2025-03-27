@@ -9,11 +9,16 @@
     <label for="hero-powers">Super Powers: </label>
     <ul>
       <li *ngFor="let power of hero.powers; let i = index">
-        {{power}} <button (click)="removePower(i)">Remove</button>
+        {{power}}
+        <button (click)="removePower(i)" class="remove-button">
+          <i class="fas fa-trash"></i>
+        </button>
       </li>
     </ul>
     <input [(ngModel)]="newPower" placeholder="New power"/>
-    <button (click)="addPower()">Add Power</button>
+    <button (click)="addPower()" class="add-button">
+      <i class="fas fa-plus-circle"></i> Add Power
+    </button>
   </div>
   <button type="button" (click)="goBack()">go back</button>
 </div>

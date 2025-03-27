@@ -22,3 +22,27 @@ label {
     color: #ccc;
     cursor: auto;
   }
+  .remove-button {
+    background: none;
+    border: none;
+    color: rgb(222, 103, 103);
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+  
+  .remove-button:hover {
+    color: darkred;
+  }
+  .add-button {
+    background: none;
+    border: none;
+    color: #369;
+    cursor: pointer;
+    font-size: 1.2em;
+    align-items: center;
+    gap: 0.em;
+  }
+  
+  .add-button:hover {
+    color: #369;
+  }
