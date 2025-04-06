@@ -9,6 +9,9 @@ export class Hero {
   @Column()
   name!: string;
 
+  @Column()
+  apellido!: string;
+
   @OneToMany(() => Superpower, superpower => superpower.hero, { cascade: true })
   superpowers: Superpower[] = [];
 }

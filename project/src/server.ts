@@ -7,6 +7,13 @@ import {
 import express from 'express';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { Router } from 'express';
+import heroRoutes from "../backend/src/routes/hero.routes.js"; // Importa las rutas
+
+if (typeof heroRoutes !== 'function') {
+  throw new Error("heroRoutes must be a middleware function");
+}
+
 
 const serverDistFolder = dirname(fileURLToPath(import.meta.url));
 const browserDistFolder = resolve(serverDistFolder, '../browser');
@@ -29,6 +36,16 @@ const angularApp = new AngularNodeAppEngine();
 /**
  * Serve static files from /browser
  */
+
+
+// Configurar rutas
+app.use("/heroes", heroRoutes); // Usa el router en la ruta "/heroes"
+
+// Iniciar el servidor
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+});
 app.use(
   express.static(browserDistFolder, {
     maxAge: '1y',
